@@ -29,6 +29,8 @@ jobs:
     needs: [lint]
     if: always()
     uses: ./.github/workflows/reusable_pr_comment.yml
+    permissions:
+      pull-requests: write  # 👈👈 ESTO ES LO QUE FALTA
     with:
       message: |
         ## CI Pipeline Results
